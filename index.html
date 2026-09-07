@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>券商策略月报</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1f232c;
+    --border: #2a2f3a;
+    --text: #e6e9ef;
+    --muted: #8b93a3;
+    --accent: #4f8cff;
+    --chip: #23304a;
+    --up: #ff5b5b;
+    --down: #21c08b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(180deg, #11141b, #11141be0);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+  }
+  .head-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 20px; margin: 0; letter-spacing: 1px; }
+  .meta { color: var(--muted); font-size: 13px; }
+  .week-picker { display: flex; gap: 6px; flex-wrap: wrap; max-width: 1100px; margin: 12px auto 0; }
+  .week-btn {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .week-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .controls {
+    max-width: 1100px;
+    margin: 14px auto 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  input, select {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+  }
+  input { flex: 1; min-width: 200px; }
+  main { max-width: 1100px; margin: 18px auto; padding: 0 20px 60px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card .top { display: flex; justify-content: space-between; align-items: center; }
+  .broker { font-weight: 700; font-size: 15px; }
+  .date { color: var(--muted); font-size: 12px; }
+  .title { font-size: 14px; color: var(--text); }
+  .title a { color: var(--accent); text-decoration: none; }
+  .title a:hover { text-decoration: underline; }
+  .summary { font-size: 13px; color: #c4cad6; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    background: var(--chip);
+    color: #bcd0ff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px; border-top: 1px solid var(--border); }
+   .stat { color: var(--muted); font-size: 12px; margin: 0 0 12px; }
+  @media (max-width: 600px) {
+    header { padding: 12px 14px; }
+    h1 { font-size: 17px; }
+    .week-picker { gap: 5px; }
+    .week-btn { padding: 8px 10px; font-size: 12px; min-height: 36px; }
+    .controls { flex-direction: column; gap: 8px; }
+    input, select { min-width: 0; width: 100%; padding: 10px 12px; font-size: 15px; }
+    main { padding: 0 12px 60px; }
+    .grid { grid-template-columns: 1fr; gap: 12px; }
+    .card { padding: 14px; }
+    .broker { font-size: 14px; }
+    .title { font-size: 13px; }
+    .summary { font-size: 12px; }
+    .chip { font-size: 11px; padding: 3px 8px; }
+  }
+  @media (max-width: 360px) {
+    .week-btn { padding: 8px 8px; font-size: 11px; }
+    .card { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-row">
+    <h1>券商策略月报</h1>
+    <div class="meta" id="meta"></div>
+  </div>
+  <div class="week-picker" id="monthPicker"></div>
+  <div class="controls">
+    <input id="search" type="text" placeholder="搜索券商 / 标题 / 观点 / 板块 / 个股名 / 代码…">
+    <select id="typeFilter">
+      <option value="">全部类型</option>
+      <option value="策略">券商策略</option>
+      <option value="个股研报">个股研报</option>
+    </select>
+    <select id="brokerFilter"></select>
+    <select id="sectorFilter"></select>
+    <select id="sortFilter">
+      <option value="desc">最新优先</option>
+      <option value="asc">最早优先</option>
+    </select>
+  </div>
+</header>
+<main>
+  <div class="stat" id="stat"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" style="display:none">本月暂无数据</div>
+</main>
+<footer>数据由每周抓取脚本生成 · 仅供研究参考，不构成投资建议</footer>
+
+<script src="data/data.js"></script>
+<script>
+(function () {
+  var DATA = (window.STRATEGY_DATA || { weeks: {}, latest: null });
+  var weeks = Object.keys(DATA.weeks).sort().reverse();
+  var current = DATA.latest || weeks[0] || null;
+
+  var monthPicker = document.getElementById('monthPicker');
+  var grid = document.getElementById('grid');
+  var empty = document.getElementById('empty');
+  var meta = document.getElementById('meta');
+  var stat = document.getElementById('stat');
+  var search = document.getElementById('search');
+  var typeFilter = document.getElementById('typeFilter');
+  var brokerFilter = document.getElementById('brokerFilter');
+  var sectorFilter = document.getElementById('sectorFilter');
+  var sortFilter = document.getElementById('sortFilter');
+
+  function uniq(arr) { return Array.from(new Set(arr)); }
+
+  function buildFilters() {
+    var all = [];
+    weeks.forEach(function (w) { all = all.concat(DATA.weeks[w].items || []); });
+    var brokers = uniq(all.map(function (i) { return i.broker; })).sort(function (a, b) {
+      return a.localeCompare(b, "zh");
+    });
+    var sectors = uniq([].concat.apply([], all.map(function (i) { return i.sectors || []; }))).sort();
+    brokerFilter.innerHTML = '<option value="">全部券商</option>' + brokers.map(function (b) {
+      return '<option value="' + b + '">' + b + '</option>';
+    }).join('');
+    sectorFilter.innerHTML = '<option value="">全部板块</option>' + sectors.map(function (s) {
+      return '<option value="' + s + '">' + s + '</option>';
+    }).join('');
+  }
+
+  function renderMonths() {
+    monthPicker.innerHTML = weeks.map(function (w) {
+      var d = DATA.weeks[w];
+      var label = w + (d.monthRange ? ' (' + d.monthRange + ')' : '');
+      return '<button class="week-btn' + (w === current ? ' active' : '') + '" data-w="' + w + '">' + label + '</button>';
+    }).join('');
+    Array.prototype.forEach.call(monthPicker.querySelectorAll('.week-btn'), function (btn) {
+      btn.onclick = function () { current = btn.getAttribute('data-w'); renderMonths(); render(); };
+    });
+  }
+
+  function render() {
+    var week = DATA.weeks[current];
+    if (!week) { grid.innerHTML = ''; empty.style.display = 'block'; meta.textContent = ''; return; }
+    meta.textContent = '更新于 ' + (week.updatedAt || current) + (week.count ? ' · 共 ' + week.count + ' 篇' : '');
+
+    var q = search.value.trim().toLowerCase();
+    var tf = typeFilter.value;
+    var bf = brokerFilter.value;
+    var sf = sectorFilter.value;
+
+    var items = (week.items || []).filter(function (i) {
+      if (tf && (i.type || '策略') !== tf) return false;
+      if (bf && i.broker !== bf) return false;
+      if (sf && (i.sectors || []).indexOf(sf) === -1) return false;
+      if (q) {
+        var hay = [i.broker, i.title, i.summary, i.content, i.stock, i.stockCode, i.type, (i.sectors || []).join(' ')].join(' ').toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+
+    var dir = sortFilter.value === 'asc' ? 1 : -1;
+    items.sort(function (a, b) {
+      var da = a.date || '', db = b.date || '';
+      if (da < db) return -1 * dir;
+      if (da > db) return 1 * dir;
+      return 0;
+    });
+
+    var typeLabel = tf === '个股研报' ? '个股研报' : (tf === '策略' ? '券商策略' : '内容');
+    stat.textContent = '本月展示 ' + items.length + ' 篇' + typeLabel;
+    empty.style.display = items.length ? 'none' : 'block';
+
+    grid.innerHTML = items.map(function (i) {
+      var typeBadge = i.type === '个股研报'
+        ? '<span class="chip" style="background:#3a2a4a;color:#e0b0ff">个股研报</span>' : '';
+      var stockChip = i.stock
+        ? '<span class="chip" style="background:#23304a;color:#bcd0ff">' + i.stock + (i.stockCode ? ' ' + i.stockCode : '') + '</span>' : '';
+      var ratingChip = i.rating
+        ? '<span class="chip" style="background:#2a3a2a;color:#9fe0a0">' + i.rating + '</span>' : '';
+      var chips = [].concat(i.sectors || []).map(function (s) { return '<span class="chip">' + s + '</span>'; }).join('');
+      var link = i.url ? '<a href="' + i.url + '" target="_blank" rel="noopener">' + (i.title || '查看原文') + '</a>' : (i.title || '');
+      return '<div class="card">' +
+        '<div class="top"><span class="broker">' + i.broker + '</span><span class="date">' + (i.date || '') + '</span></div>' +
+        '<div class="title">' + link + '</div>' +
+        (i.summary ? '<div class="summary">' + i.summary + '</div>' : '') +
+        (typeBadge || stockChip || ratingChip || chips ? '<div class="chips">' + typeBadge + stockChip + ratingChip + chips + '</div>' : '') +
+        '</div>';
+    }).join('');
+  }
+
+  search.addEventListener('input', render);
+  typeFilter.addEventListener('change', render);
+  brokerFilter.addEventListener('change', render);
+  sectorFilter.addEventListener('change', render);
+  sortFilter.addEventListener('change', render);
+
+  buildFilters();
+  renderMonths();
+  render();
+})();
+</script>
+</body>
+</html>
