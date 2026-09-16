@@ -1,4 +1,4 @@
-name: 体验版-每周更新
+name: 体验版-每天更新
 
 on:
   schedule:
@@ -37,6 +37,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "没有数据更新"
           else
-            git commit -m "体验版每周更新 $(date +'%Y-%m-%d')"
+            git commit -m "体验版每天更新 $(date +'%Y-%m-%d')"
             git push origin main
           fi
