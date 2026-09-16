@@ -2,7 +2,7 @@ name: 体验版-每周更新
 
 on:
   schedule:
-    - cron: '0 2 * * 1'  # 每周一凌晨2点（UTC）
+    - cron: '0 2 * * *'   # 每日凌晨2点（UTC）
   workflow_dispatch:      # 允许手动触发
 
 permissions:
