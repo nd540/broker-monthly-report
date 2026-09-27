@@ -54176,9 +54176,9 @@
       ]
     },
     "2026-09": {
-      "updatedAt": "2026-09-26",
+      "updatedAt": "2026-09-27",
       "monthRange": "09-01 ~ 09-30",
-      "count": 1261,
+      "count": 1279,
       "items": [
         {
           "type": "策略",
@@ -73762,6 +73762,276 @@
             "电力"
           ],
           "url": "https://pdf.dfcfw.com/pdf/H3_AP202609241829859525_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "春风动力深度报告：中国全地形车出海龙头，高端新品放量助推量价齐升",
+          "date": "2026-09-27",
+          "stock": "春风动力",
+          "stockCode": "603129",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "摩托车及其他"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829936270_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "需求端景气增长，静待盈利能力回升",
+          "date": "2026-09-27",
+          "stock": "逸飞激光",
+          "stockCode": "688646",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "自动化设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829936268_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "燕京啤酒：U8大单品持续引领，降本控费高质量增长",
+          "date": "2026-09-27",
+          "stock": "燕京啤酒",
+          "stockCode": "000729",
+          "rating": "增持",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "非白酒"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829936264_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "利润大幅增长，算力建设释放光纤需求",
+          "date": "2026-09-27",
+          "stock": "长飞光纤",
+          "stockCode": "601869",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "通信设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829936260_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "交付及盈利能力同步向上，业绩延续高增长态势",
+          "date": "2026-09-27",
+          "stock": "乔锋智能",
+          "stockCode": "301603",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "通用设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829936259_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "国信证券",
+          "title": "中期扣非归母净利润增长35%，医美+女装双业务驱动",
+          "date": "2026-09-27",
+          "stock": "朗姿股份",
+          "stockCode": "002612",
+          "rating": "增持",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "医疗美容"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829935675_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "国金证券",
+          "title": "行业解决方案有利于仪表自主可控",
+          "date": "2026-09-27",
+          "stock": "川仪股份",
+          "stockCode": "603100",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "通用设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609271829935258_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "国金证券",
+          "title": "“曙光初现”系列（二）爱旭股份：BC时代启幕，龙头有望迎来戴维斯双击",
+          "date": "2026-09-27",
+          "stock": "爱旭股份",
+          "stockCode": "600732",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "光伏设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925974_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：毛利率提升，半导体与显示业务加速拓展",
+          "date": "2026-09-27",
+          "stock": "迈为股份",
+          "stockCode": "300751",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "光伏设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925913_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：电网订单稳步拓展，出海与算力供电培育增量",
+          "date": "2026-09-27",
+          "stock": "白云电器",
+          "stockCode": "603861",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "电网设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925911_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "保利发展2026年半年报点评：业绩短期承压，投资聚焦核心城市",
+          "date": "2026-09-27",
+          "stock": "保利发展",
+          "stockCode": "600048",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "房地产开发"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925701_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：产品结构优化，储能与算力供电打开成长空间",
+          "date": "2026-09-27",
+          "stock": "阳光电源",
+          "stockCode": "300274",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "光伏设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829916496_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：数据中心业务稳步增长，海外光储打开增量空间",
+          "date": "2026-09-27",
+          "stock": "科士达",
+          "stockCode": "002518",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "其他电源设备Ⅱ"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829916495_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：智慧电器深耕算力配电，海外储能拓展成长空间",
+          "date": "2026-09-26",
+          "stock": "正泰电器",
+          "stockCode": "601877",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "电网设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925910_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "2026年H1点评：利润增速同比超20%",
+          "date": "2026-09-26",
+          "stock": "国机汽车",
+          "stockCode": "600335",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "汽车服务"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925702_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "Q2迎来强修复，海外业务经营亮眼",
+          "date": "2026-09-26",
+          "stock": "宁波精达",
+          "stockCode": "603088",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "通用设备"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925703_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "中报点评：海外业务盈利短期承压，国内自主品牌业务快速成长",
+          "date": "2026-09-26",
+          "stock": "佩蒂股份",
+          "stockCode": "300673",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "饲料"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829925678_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：工业电源盈利提升，储能与算力需求驱动成长",
+          "date": "2026-09-26",
+          "stock": "盛弘股份",
+          "stockCode": "300693",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "其他电源设备Ⅱ"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202609261829916494_1.pdf"
         }
       ]
     }
