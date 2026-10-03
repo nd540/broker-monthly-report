@@ -54176,7 +54176,7 @@ window.STRATEGY_DATA = {
       ]
     },
     "2026-09": {
-      "updatedAt": "2026-10-02",
+      "updatedAt": "2026-10-03",
       "monthRange": "09-01 ~ 09-30",
       "count": 1389,
       "items": [
@@ -75850,9 +75850,9 @@ window.STRATEGY_DATA = {
       ]
     },
     "2026-10": {
-      "updatedAt": "2026-10-02",
+      "updatedAt": "2026-10-03",
       "monthRange": "10-01 ~ 10-31",
-      "count": 2,
+      "count": 7,
       "items": [
         {
           "type": "策略",
@@ -75878,6 +75878,81 @@ window.STRATEGY_DATA = {
             "工业金属"
           ],
           "url": "https://pdf.dfcfw.com/pdf/H3_AP202610011830064704_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "华鑫证券",
+          "title": "公司动态研究报告：高速背板连接器新贵，业绩即将进入快速增长期",
+          "date": "2026-10-02",
+          "stock": "胜蓝股份",
+          "stockCode": "300843",
+          "rating": "买入",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "消费电子"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610021830112397_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "2026年H1点评，利润同比增长502.6%",
+          "date": "2026-10-02",
+          "stock": "海通发展",
+          "stockCode": "603162",
+          "rating": "增持",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "航运港口"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610021830111911_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "2026年H1点评，利润同比大增227.57%",
+          "date": "2026-10-02",
+          "stock": "招商轮船",
+          "stockCode": "601872",
+          "rating": "增持",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "航运港口"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610021830111842_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "太平洋",
+          "title": "我爱我家2026年半年报点评：持续精耕细作核心城市，归母净利润明显提升",
+          "date": "2026-10-02",
+          "stock": "我爱我家",
+          "stockCode": "000560",
+          "rating": "增持",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "房地产服务"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610021830111836_1.pdf"
+        },
+        {
+          "type": "个股研报",
+          "broker": "国信证券",
+          "title": "二季度毛利率同比提升，汇兑等因素压制利润",
+          "date": "2026-10-02",
+          "stock": "骆驼股份",
+          "stockCode": "601311",
+          "rating": "增持",
+          "summary": "",
+          "content": "",
+          "sectors": [
+            "电池"
+          ],
+          "url": "https://pdf.dfcfw.com/pdf/H3_AP202610021830111801_1.pdf"
         }
       ]
     }
