@@ -54176,7 +54176,7 @@ window.STRATEGY_DATA = {
       ]
     },
     "2026-09": {
-      "updatedAt": "2026-10-05",
+      "updatedAt": "2026-10-06",
       "monthRange": "09-01 ~ 09-30",
       "count": 1389,
       "items": [
@@ -75850,7 +75850,7 @@ window.STRATEGY_DATA = {
       ]
     },
     "2026-10": {
-      "updatedAt": "2026-10-05",
+      "updatedAt": "2026-10-06",
       "monthRange": "10-01 ~ 10-31",
       "count": 20,
       "items": [
